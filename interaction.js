@@ -48,3 +48,14 @@ let ITENS_LOJA = [
         descricao:"Vinho que harmoniza muito bem com carnes vermelhas "
     }
 ]
+
+var itens_section = document.getElementById('itens_section')
+ITENS_LOJA.forEach(function(dados){
+    itens_section.innerHTML += `<div class="box">
+                                    <img src="${dados.url_img}" class="box__img">
+                                    <h2 class="box__name">${dados.nome}</h2>
+                                    <p><strong>Preço:</strong> R$ ${dados.preco}</p>
+                                    <h3>Descrição:</h3>
+                                    <p>${dados.descricao}</p>
+                                </div>`
+})
